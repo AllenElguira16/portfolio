@@ -1,5 +1,3 @@
-import Image from "next/image";
-import profileImage from "../../assets/profile.jpg";
 import { AiFillHtml5 } from "react-icons/ai";
 import {
   BiLogoCss3,
@@ -15,63 +13,42 @@ import {
 import { GrMysql, GrReactjs } from "react-icons/gr";
 import { TbBrandNextjs } from "react-icons/tb";
 import { BsFillBootstrapFill } from "react-icons/bs";
-import { SiExpress, SiPhp, SiSqlite } from "react-icons/si";
+import {
+  SiChakraui,
+  SiDaisyui,
+  SiExpress,
+  SiMui,
+  SiPhp,
+  SiSqlite,
+  SiStyledcomponents,
+} from "react-icons/si";
 import { DiPostgresql } from "react-icons/di";
 
-export default function About() {
+export default function Techs() {
   return (
-    <>
-      <section className="flex justify-between px-3 gap-4">
-        <Image
-          src={profileImage}
-          alt="Profile Image"
-          className="rounded-xl"
-          priority
-          width={300}
-          height={300}
-        />
-        <div>
-          <h1 className="text-4xl font-bold">
-            Hello~!! I&apos;m Allen, a Frontend Developer
-          </h1>
-          <p>
-            A highly skilled Frontend Developer, with over 3 years of experience
-            in the IT industry with a proven track record of success.
-          </p>
-          <p>
-            I specialize in using React and TypeScript as my core technologies
-            and have consistently demonstrated my technical expertise on various
-            projects.
-          </p>
-          <p>
-            Throughout my career, I have been recognized as one of the most
-            talented developers in the industry due to my ability to
-            consistently deliver high-quality and performant work.
-          </p>
-        </div>
-      </section>
-      <section className="px-3">
+    <div className="grid place-items-center h-screen px-4" id="techs">
+      <section className="flex flex-col px-3 py-4 gap-4 max-w-6xl mx-auto w-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-gray-100">
         <header>
-          <h1 className="text-4xl font-bold">Skills</h1>
-          <span>Here are some of my skills:</span>
+          <h1 className="text-4xl font-bold">Techs</h1>
+          <span>Here are some of technologies I used on some projects:</span>
         </header>
         <div className="flex flex-wrap gap-2">
-          {skills.map(({ text, logo }, key) => (
+          {technologies.map(({ text, logo }, key) => (
             <div
-              className="flex items-center px-3 py-2 border rounded-sm gap-2 text-2xl"
+              className="flex items-center px-1 py-0.5 md:px-3 md:py-2 rounded-sm gap-2 text-xl md:text-2xl bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-gray-100"
               key={key}
             >
               {logo}
-              <span className="text-xl">{text}</span>
+              <span className="text-lg md:text-xl">{text}</span>
             </div>
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }
 
-const skills = [
+const technologies = [
   {
     text: "HTML5",
     logo: <AiFillHtml5 />,
@@ -97,6 +74,18 @@ const skills = [
     logo: <GrReactjs />,
   },
   {
+    text: "Material-UI",
+    logo: <SiMui />,
+  },
+  {
+    text: "ChakraUI",
+    logo: <SiChakraui />,
+  },
+  {
+    text: "Daisy UI",
+    logo: <SiDaisyui />,
+  },
+  {
     text: "Vue",
     logo: <BiLogoVuejs />,
   },
@@ -111,6 +100,13 @@ const skills = [
   {
     text: "Bootstrap 5",
     logo: <BsFillBootstrapFill />,
+  },
+  {
+    text: "EmotionCSS",
+  },
+  {
+    text: "styled-components",
+    logo: <SiStyledcomponents />,
   },
   {
     text: "PHP",

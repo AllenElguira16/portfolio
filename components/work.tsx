@@ -1,82 +1,91 @@
 "use client";
 import { useState } from "react";
 
-export default function Experiences() {
+export default function Works() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const tabs = experiences.map(({ title }) => title);
+  const tabs = experiences.map(({ shortTitle }) => shortTitle);
   const experience = experiences[currentIndex];
 
   return (
-    <section className="flex flex-col gap-3 px-3">
-      <header>
-        <h1 className="text-4xl font-bold">Projects</h1>
-        <p>
-          Here are some of the Projects that I&apos;ve working on in the past 3
-          years:
-        </p>
-      </header>
-      <nav className="flex gap-1">
-        {tabs.map((tab, key) => (
-          <button
-            className={`border px-2 py-1.5 rounded-md ${
-              currentIndex === key ? "bg-white text-black" : ""
-            }`}
-            onClick={() => setCurrentIndex(key)}
-            key={key}
-          >
-            {tab}
-          </button>
-        ))}
-      </nav>
-      <div className="flex flex-col gap-2">
-        <header className="">
-          <h1 className="leading-none text-2xl font-bold">
-            {experience.title}
-          </h1>
-          {experience.role && <span>{experience.role}</span>}
+    <div className="grid place-items-center h-screen px-4" id="work">
+      <section className="flex flex-col px-3 py-4 gap-4 max-w-6xl mx-auto w-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-gray-100">
+        <header>
+          <h1 className="text-4xl font-bold">Work Experiences</h1>
+          <p>
+            Here are some of the Work Experiences that I&apos;ve working on in
+            the past 3 years:
+          </p>
         </header>
-        {experience.responsibilities && (
-          <div>
-            {experience.responsibilities.map((responsibility, key) => (
-              <div key={key}>
-                {"-"} {responsibility}
+        <nav className="flex flex-1 gap-1 flex-wrap">
+          {tabs.map((tab, key) => (
+            <button
+              className={`border px-2 py-1.5 whitespace-nowrap rounded-md ${
+                currentIndex === key ? " bg-[#29203F] text-white" : ""
+              }`}
+              onClick={() => setCurrentIndex(key)}
+              key={key}
+            >
+              {tab}
+            </button>
+          ))}
+        </nav>
+        <div className="min-h-[calc(100vh-450px)] max-h-[calc(100vh-450px)] md:min-h-[calc(100vh-300px)] md:max-h-[calc(100vh-300px)] overflow-y-auto">
+          <div className="flex flex-col gap-2">
+            <header>
+              <h1 className="leading-none text-2xl font-bold">
+                {experience.title}
+              </h1>
+              {experience.role && <span>{experience.role}</span>}
+            </header>
+            {experience.responsibilities && (
+              <div>
+                {experience.responsibilities.map((responsibility, key) => (
+                  <div key={key}>
+                    {"-"} {responsibility}
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        )}
-        <div className="flex flex-col gap-2">
-          <header className="text-xl font-bold">Projects</header>
-          {experience.projects.map(
-            ({ title, role, description, link }, key) => (
-              <div
-                className="border px-3 py-2 rounded leading-normal w-full"
-                key={key}
-              >
-                <header>
-                  <h1 className="leading-none text-xl">{title}</h1>
-                  {role && <span>{role}</span>}
-                </header>
-                <div className="leading-normal">{description}</div>
-                {link && (
-                  <a
-                    href={link}
-                    target="_blank"
-                    className="text-blue-400 hover:underline"
-                  >
-                    {link}
-                  </a>
+            )}
+            <div className="flex flex-col gap-2">
+              <header className="text-xl font-bold">Projects</header>
+              <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-3">
+                {experience.projects.map(
+                  ({ title, role, description, link }, key) => (
+                    <div
+                      className="flex-1 border px-3 py-2 rounded leading-normal"
+                      key={key}
+                    >
+                      <header className="mb-4">
+                        <h1 className="leading-none text-xl font-bold">
+                          {title}
+                        </h1>
+                        {role && <span>{role}</span>}
+                      </header>
+                      <div className="leading-normal">{description}</div>
+                      {link && (
+                        <a
+                          href={link}
+                          target="_blank"
+                          className="text-blue-400 hover:underline break-words"
+                        >
+                          {link}
+                        </a>
+                      )}
+                    </div>
+                  )
                 )}
               </div>
-            )
-          )}
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
 
 type Experience = {
   title: string;
+  shortTitle: string;
   role?: string;
   responsibilities?: string[];
   projects: {
@@ -89,7 +98,8 @@ type Experience = {
 
 const experiences: Experience[] = [
   {
-    title: "Ground-Link Advertising Company",
+    title: "Ground-Link Advertising Services",
+    shortTitle: "Ground-Link",
     role: "Lead Frontend Developer (April 2023 - Present)",
     responsibilities: [
       "Led the frontend team and effectively communicated with developers from diverse backgrounds.",
@@ -113,7 +123,8 @@ const experiences: Experience[] = [
     ],
   },
   {
-    title: "Cafe24",
+    title: "Cafe24 - PH Branch",
+    shortTitle: "Cafe24PH",
     role: "L2 Frontend Developer (March 2020 - April 2023)",
     responsibilities: [
       "Developed responsive and interactive web pages using different techs like React, Vue, Angular, TypeScript and others.",
@@ -139,8 +150,8 @@ const experiences: Experience[] = [
       {
         title: "Style Tracker",
         role: "Lead Fullstack developer",
-        description:
-          "A tool for Cafe24 Developers to detect any style discrepancies on a Mall, when installing a 3rd party application on mall can change the design of a website thus by creating Style Tracker can help easily track discrepancies.\nWritten in Next.js with custom express in backend to maximize security and performance",
+        description: `A tool for Cafe24 Developers to detect any style discrepancies on a Mall, when installing a 3rd party application on mall can change the design of a website thus by creating Style Tracker can help easily track discrepancies.\n
+          Written in Next.js with custom express in backend to maximize security and performance`,
       },
       {
         title: "Global Help Center",
@@ -167,31 +178,28 @@ const experiences: Experience[] = [
   },
   {
     title: "Freelance",
+    shortTitle: "Freelance",
     projects: [
       {
         title: "Tres Marias Sweets",
-        // role: "Fullstack Developer",
         description:
           "An online ordering system for Tres Marias Sweets\nWritten in Vue.js, and TailwindCSS in frontend and using Laravel in backend",
         link: "https://github.com/AllenElguira16/TresMariasSweets",
       },
       {
         title: "piso-print-kiosk",
-        // role: "Fullstack Developer",
         description:
           "A coin based kiosk that prints when a coin is slotted to the machine\nWritten in React, and TailwindCSS in frontend and Arduino in hardware",
         link: "https://github.com/AllenElguira16/piso-print-kiosk",
       },
       {
         title: "Stronghold Insurance Management and Information System",
-        // role: "Fullstack Developer",
         description:
           "A management system for Stronghold Company\nWritten in React, and TailwindCSS in frontend and NodeJS in backend",
         link: "https://github.com/AllenElguira16/SIMIS",
       },
       {
         title: "E-Learning",
-        // role: "Fullstack Developer",
         description:
           "An interactive e-learning service\nWritten in React, and TailwindCSS in frontend and NodeJS in backend",
         link: "https://github.com/AllenElguira16/E-Learning",
@@ -200,17 +208,16 @@ const experiences: Experience[] = [
   },
   {
     title: "Others",
+    shortTitle: "Others",
     projects: [
       {
         title: "Video to Ascii CLI",
-        // role: "Backend Developer",
         description:
           "A CLI tool that converts any mp4 videos into ascii animation\nWritten in NodeJS in backend and utilizing worker_threads for maximize performance",
         link: "https://github.com/AllenElguira16/video-to-ascii-cli",
       },
       {
         title: "Nebula",
-        // role: "Backend",
         description:
           "A framework written with newest features of PHP 8 such as attributes, destructuring, and many more",
         link: "https://github.com/AllenElguira16/Nebula",
