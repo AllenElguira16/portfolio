@@ -2,5 +2,18 @@
   "files.associations": {
     "*.css": "tailwindcss",
     ".env.*": "properties"
-  }
+  },
+  "cSpell.words": [
+    "Chakraui",
+    "clsx",
+    "daisyui",
+    "Elguira",
+    "Nextjs",
+    "Reactjs",
+    "Socketdotio",
+    "Styledcomponents",
+    "tailwindcss",
+    "Vuejs",
+    "webp"
+  ]
 }
