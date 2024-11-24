@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Barlow-Regular";
+    src: url("/Barlow-Regular.ttf") format("truetype");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Montserrat-Regular";
+    src: url("/Montserrat-Regular.ttf") format("truetype");
+    font-display: swap;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media screen(sm) {
+    html {
+      @apply text-lg;
+    }
+  }
+}
