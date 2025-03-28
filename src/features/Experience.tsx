@@ -61,7 +61,7 @@ const Projects: FC<{ projects: TExperience["projects"] }> = ({ projects }) => {
       {projects.map((project) => (
         <div
           key={project.title}
-          className="card bg-base-100 card-bordered md:w-[calc((100%/2)-1rem)] lg:w-[calc((100%/3)-1rem)]"
+          className="card bg-base-100 card-bordered w-full md:w-[calc((100%/2)-1rem)] lg:w-[calc((100%/3)-1rem)]"
         >
           <div className="card-body">
             <div className="card-title block leading-[0px]">

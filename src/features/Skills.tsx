@@ -10,9 +10,9 @@ export const Skills = () => {
         {skills.map(({ text, Logo }) => (
           <div
             key={text}
-            className="card bg-base-100 card-bordered card-compact sm:card-normal"
+            className="card bg-base-100 card-bordered card-compact sm:card-normal max-w-28 w-full"
           >
-            <div className="card-body items-center">
+            <div className="card-body items-center text-center justify-center">
               <div className="size-4 sm:size-8">
                 {!!Logo && <Logo className="text-lg sm:text-3xl m-auto" />}
               </div>
