@@ -26,7 +26,7 @@ export const Intro: FC = () => {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1"
+                className="flex items-center gap-1 hover:underline"
               >
                 <Logo className="text-lg" />
                 <span>{text}</span>

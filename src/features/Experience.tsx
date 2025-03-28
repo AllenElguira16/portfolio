@@ -18,20 +18,34 @@ export const Experience = () => {
         {experiences.map((experience) => (
           <div className="flex gap-4" key={experience.shortTitle}>
             <div className="w-0.5 flex-1 shrink-0 flex flex-col items-center">
-              <div className="size-3 bg-base-content rounded-full my-3"></div>
+              <div className="size-1.5 bg-base-content rounded-full my-3"></div>
               <div className="w-full h-full flex-1 bg-base-300"></div>
             </div>
             <div className="mb-2">
-              <div className="font-bold flex-col items-start leading-[0px]">
-                <div className="text-xl">{experience.title}</div>
-                <div className="flex flex-col text-sm leading-4">
-                  <span>{experience.role}</span>
-                  <small>{experience.date}</small>
+              <h1 className="font-bold flex-col items-start text-xl">
+                {experience.title}
+              </h1>
+              {!!experience.works && (
+                <div>
+                  {experience.works.map((work, key) => (
+                    <div key={key}>
+                      <div className="font-bold flex flex-col text-sm leading-4">
+                        <span className="text-base">{work.role}</span>
+                        <small>{work.date}</small>
+                      </div>
+                      <ul className="list-disc py-2 ml-6">
+                        {work.responsibilities?.map((responsibility, key) => (
+                          <li key={key}>{responsibility}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
+              )}
+              <div>
+                <p className="text-lg font-bold mb-2">Projects</p>
+                <Projects projects={experience.projects} />
               </div>
-              <p className="py-2">{experience.responsibilities}</p>
-              <p className="text-lg font-bold mb-2">Projects</p>
-              <Projects projects={experience.projects} />
             </div>
           </div>
         ))}
@@ -67,7 +81,13 @@ const Projects: FC<{ projects: TExperience["projects"] }> = ({ projects }) => {
               </div>
               <small className="text-xs leading-3">{project.role}</small>
             </div>
-            <p>{project.description}</p>
+            <p>
+              {project.description ?? (
+                <span className="italic font-bold text-red-700">
+                  Not available
+                </span>
+              )}
+            </p>
           </div>
         </div>
       ))}

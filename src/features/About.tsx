@@ -15,25 +15,35 @@ export const About = () => {
         human-readable code.
       </p>
       <p className="py-2">
-        A quick start on how I became a programmer.
-        <br />
-        Initially, I've started programming in my last days of high-school when
-        I randomly scrolling through social media about programming (back then I
-        have no idea what it is about). I've researched a lot into that
-        particular subject especially in programming doing C# windows applets
-        and do pranks for my classmates. I've done a bunch of things like
-        systems programming in C++, Windows app in C#, hardware programming in
-        Arduino C, and websites in a lot of languages such as PHP, TypeScript
-        and more.
+        I’m a Full-stack Engineer with over five years of professional
+        experience, dedicated to writing clean, maintainable, and human-readable
+        code that enhances both team collaboration and project quality.
       </p>
       <p className="py-2">
-        Throughout my career, I'm consistently learning new technologies to
-        incorporate and enhance my skills and knowledge as a programmer.
+        My journey into programming started in my final days of high school when
+        I stumbled upon a social media post about coding. At the time, I had no
+        idea what it was about, but curiosity took over. I began researching and
+        experimenting, building small C# Windows applets—mostly to prank my
+        classmates!
       </p>
       <p className="py-2">
-        I have been recognized as one of the most talented developers in the
-        industry due to my ability to deliver high-quality products for our
-        clients.
+        That curiosity quickly turned into passion. I explored systems
+        programming with C++, Windows applications in C#, hardware programming
+        with Arduino C, and web development using PHP, TypeScript, and more. I
+        started building websites back in the ES3, jQuery, and PHP era—before
+        JavaScript became fully standardized.
+      </p>
+      <p className="py-2">
+        Throughout my career, I’ve been committed to continuous learning, always
+        staying up-to-date with emerging technologies and best practices. I
+        thrive on solving complex problems, optimizing performance, and
+        developing scalable solutions that create real impact.
+      </p>
+      <p className="py-2">
+        I’ve been recognized for my problem-solving skills and ability to
+        deliver high-quality products, helping clients achieve their goals
+        efficiently. But beyond just writing code, I focus on building
+        meaningful solutions that make a difference.
       </p>
     </Content>
   );

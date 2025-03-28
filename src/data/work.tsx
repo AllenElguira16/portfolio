@@ -1,13 +1,15 @@
 export type TExperience = {
   title: string;
   shortTitle: string;
-  role?: string;
-  date?: string;
-  responsibilities?: string[];
+  works?: {
+    role?: string;
+    date?: string;
+    responsibilities?: string[];
+  }[];
   projects: {
     title: string;
     role?: string;
-    description: string;
+    description?: string;
     link?: string;
   }[];
 };
@@ -16,37 +18,56 @@ export const experiences: TExperience[] = [
   {
     title: "Global Payments",
     shortTitle: "Global Payments",
-    role: "Senior Frontend Engineer",
-    date: "October 2023 - present",
-    responsibilities: [
-      "Developed responsive and interactive web pages using different techs like React, TypeScript and others.",
-      "Utilized Gitlab CI/CD and Jenkins to streamline deployment processes.",
-      "Wrote tests using tools using Jest to ensure application quality and reliability.",
-      "Collaborated with developers, designers, and stakeholders to ensure timely project delivery and page quality.",
+    works: [
+      {
+        role: "Senior Frontend Engineer",
+        date: "October 2023 - present",
+        responsibilities: [
+          "Developed responsive and interactive web applications using React, TypeScript, and other modern technologies, improving user experience and performance.",
+          "Designed and optimized CI/CD pipelines using GitLab CI/CD and Jenkins, reducing deployment time and minimizing manual errors.",
+          "Wrote and maintained unit and integration tests with Jest, enhancing application reliability and reducing bugs before production.",
+          "Collaborated closely with cross-functional teams, including developers, designers, and stakeholders, to ensure timely delivery of high-quality, scalable solutions.",
+        ],
+      },
     ],
     projects: [
       {
         title: "ActiveNet CUI",
-        role: "Lead Frontend Developer",
-        description: "N/A",
+        role: "Frontend Engineer",
       },
       {
         title: "ActiveNet AUI",
-        role: "Lead Frontend Developer",
-        description: "N/A",
+        role: "Frontend Engineer",
       },
     ],
   },
   {
     title: "Ground-Link Advertising Services",
     shortTitle: "Ground-Link",
-    role: "Lead Frontend Developer",
-    date: "April 2023 - October 2023",
-    responsibilities: [
-      "Led the frontend team and effectively communicated with developers from diverse backgrounds.",
-      "Developed web pages using modern different frameworks like NextJS.",
-      "Employed a BDD approach to write end-to-end testing with jest-puppeteer.",
-      "Improved developer productivity by introducing weekly knowledge sharing, agile methodology, daily-standups, and gitlab-ci/cd.",
+    works: [
+      {
+        role: "Lead Frontend Developer",
+        date: "Jun 2023 - October 2023",
+        responsibilities: [
+          "Led the frontend team and communicated effectively with developers from diverse backgrounds to ensure smooth collaboration.",
+          "Developed scalable and high-performance web applications using React frameworks like Next.js.",
+          "Implemented a Behavior-Driven Development (BDD) approach for end-to-end testing with Jest and Puppeteer, improving test coverage and reliability.",
+          "Enhanced developer productivity by introducing weekly knowledge-sharing sessions, agile methodologies, daily stand-ups, and GitLab CI/CD automation.",
+          "Spearheaded the adoption of a self-hosted GitLab instance, improving code collaboration and security.",
+          "Managed development and production servers using BitVise and Cloudflare, optimizing security and deployment efficiency.",
+        ],
+      },
+      {
+        role: "Senior Frontend Developer",
+        date: "April 2023 - Jun 2023",
+        responsibilities: [
+          "Led the frontend team, ensuring clear communication and smooth collaboration among developers from diverse backgrounds.",
+          "Developed scalable and high-performance web applications, optimizing load times and responsiveness.",
+          "Designed and implemented efficient developer workflows using Git and GitLab, improving version control and collaboration.",
+          "Led the migration of source code from SVN to Git via GitLab, streamlining version control processes.",
+          "Conducted thorough code reviews to uphold coding standards and maintain high-quality, maintainable code.",
+        ],
+      },
     ],
     projects: [
       {
@@ -66,15 +87,19 @@ export const experiences: TExperience[] = [
   {
     title: "Cafe24 - PH Branch",
     shortTitle: "Cafe24PH",
-    role: "L2 Frontend Developer",
-    date: "March 2020 - April 2023",
-    responsibilities: [
-      "Developed responsive and interactive web pages using different techs like React, Vue, Angular, TypeScript and others.",
-      "Utilized Gitlab CI/CD and Docker to streamline deployment processes.",
-      "Wrote tests using tools such as Jest, Jest-Puppeteer, and Playwright to ensure application quality and reliability.",
-      "Serve as the technical lead of the team, ensuring project goals are met efficiently and effectively.",
-      "Successfully migrated a “2003” legacy app to a modern application, resulting in a reduction in bugs and an improvement in performance and developer experience.",
-      "Collaborated with developers, designers, and stakeholders to ensure timely project delivery and page quality.",
+    works: [
+      {
+        role: "L2 Frontend Developer",
+        date: "March 2020 - April 2023",
+        responsibilities: [
+          "Developed responsive and interactive web applications using React, Vue, TypeScript, and other modern technologies.",
+          "Implemented GitLab CI/CD and Docker to automate and streamline deployment processes.",
+          "Wrote and maintained tests using Jest, Jest-Puppeteer, and Playwright, improving application reliability and quality.",
+          "Served as the technical lead, guiding the team to meet project goals efficiently and effectively.",
+          "Led the successful migration of a 2003 legacy application to a modern stack, reducing bugs, enhancing performance, and improving the developer experience.",
+          "Worked closely with developers, designers, and stakeholders to ensure high-quality project delivery on schedule.",
+        ],
+      },
     ],
     projects: [
       {
@@ -93,7 +118,7 @@ export const experiences: TExperience[] = [
         title: "Style Tracker",
         role: "Lead Fullstack developer",
         description: `A tool for Cafe24 Developers to detect any style discrepancies on a Mall, when installing a 3rd party application on mall can change the design of a website thus by creating Style Tracker can help easily track discrepancies.\n
-          Written in Next.js with custom express in backend to maximize security and performance`,
+      Written in Next.js with custom express in backend to maximize security and performance`,
       },
       {
         title: "Global Help Center",
