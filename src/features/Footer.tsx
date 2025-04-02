@@ -2,7 +2,7 @@ import { links } from "../data/links";
 
 export const Footer = () => {
   return (
-    <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
+    <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
       <nav className="grid grid-flow-col gap-4">
         <a className="link link-hover" href="#about">
           About
@@ -29,7 +29,7 @@ export const Footer = () => {
           ))}
         </div>
       </nav>
-      <aside className="text-gray-500">
+      <aside>
         <p>Copyright © {new Date().getFullYear()} Michael Allen Elguira.</p>
         <p>All rights reserved</p>
       </aside>

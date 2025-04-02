@@ -10,7 +10,7 @@ export const Skills = () => {
         {skills.map(({ text, Logo }) => (
           <div
             key={text}
-            className="card bg-base-100 card-bordered card-compact sm:card-normal max-w-28 w-full"
+            className="card bg-base-100 card-border card-compact sm:card-normal min-w-28"
           >
             <div className="card-body items-center text-center justify-center">
               <div className="size-4 sm:size-8">

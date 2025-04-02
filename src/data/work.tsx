@@ -33,11 +33,11 @@ export const experiences: TExperience[] = [
     projects: [
       {
         title: "ActiveNet CUI",
-        role: "Frontend Engineer",
+        role: "Senior Frontend Engineer",
       },
       {
         title: "ActiveNet AUI",
-        role: "Frontend Engineer",
+        role: "Senior Frontend Engineer",
       },
     ],
   },
@@ -146,6 +146,13 @@ export const experiences: TExperience[] = [
   {
     title: "Freelance",
     shortTitle: "Freelance",
+    works: [
+      {
+        responsibilities: [
+          "Design and developed full-stack websites according to client's needs",
+        ],
+      },
+    ],
     projects: [
       {
         title: "Tres Marias Sweets",
@@ -176,6 +183,11 @@ export const experiences: TExperience[] = [
   {
     title: "Others",
     shortTitle: "Others",
+    works: [
+      {
+        responsibilities: ["Fun projects I made"],
+      },
+    ],
     projects: [
       {
         title: "Video to Ascii CLI",

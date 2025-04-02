@@ -3,6 +3,7 @@ import { Content } from "../components/Content";
 import { Title } from "../components/Title";
 import { experiences, TExperience } from "../data/work";
 import { LuExternalLink } from "react-icons/lu";
+import { getYearsOfExperience } from "../utils/getYearsOfExperience";
 
 export const Experience = () => {
   return (
@@ -10,17 +11,13 @@ export const Experience = () => {
       <div className="mb-4">
         <Title>Work Experiences</Title>
         <span>
-          Here are some of the Work Experiences that I've working on in the past
-          3 years:
+          Here are some of the projects that I've worked on the past{" "}
+          {Math.floor(getYearsOfExperience())} years:
         </span>
       </div>
-      <div className="flex flex-col mx-2">
+      <ul>
         {experiences.map((experience) => (
-          <div className="flex gap-4" key={experience.shortTitle}>
-            <div className="w-0.5 flex-1 shrink-0 flex flex-col items-center">
-              <div className="size-1.5 bg-base-content rounded-full my-3"></div>
-              <div className="w-full h-full flex-1 bg-base-300"></div>
-            </div>
+          <li key={experience.shortTitle}>
             <div className="mb-2">
               <h1 className="font-bold flex-col items-start text-xl">
                 {experience.title}
@@ -47,9 +44,9 @@ export const Experience = () => {
                 <Projects projects={experience.projects} />
               </div>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </Content>
   );
 };
@@ -61,11 +58,11 @@ const Projects: FC<{ projects: TExperience["projects"] }> = ({ projects }) => {
       {projects.map((project) => (
         <div
           key={project.title}
-          className="card bg-base-100 card-bordered w-full md:w-[calc((100%/2)-1rem)] lg:w-[calc((100%/3)-1rem)]"
+          className="card bg-base-100 card-border w-full md:w-[calc((100%/2)-1rem)] lg:w-[calc((100%/3)-1rem)]"
         >
           <div className="card-body">
             <div className="card-title block leading-[0px]">
-              <div className="font-bold leading-5 flex-1 flex justify-center w-full">
+              <div className="font-bold leading-5 flex-1 flex justify-center w-full gap-4">
                 <span className="flex-1 text-base">{project.title}</span>
                 {project.link && (
                   <a
