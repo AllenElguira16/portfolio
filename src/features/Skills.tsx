@@ -13,9 +13,7 @@ export const Skills = () => {
             className="card bg-base-100 card-border card-compact sm:card-normal min-w-28"
           >
             <div className="card-body items-center text-center justify-center">
-              <div className="size-4 sm:size-8">
-                {!!Logo && <Logo className="text-lg sm:text-3xl m-auto" />}
-              </div>
+              {!!Logo && <Logo className="text-3xl m-auto" />}
               <span>{text}</span>
             </div>
           </div>

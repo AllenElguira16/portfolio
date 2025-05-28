@@ -14,6 +14,35 @@ export type TExperience = {
   }[];
 };
 
+export const highlights: TExperience = {
+  title: "Highlights",
+  shortTitle: "Highlights",
+  projects: [
+    {
+      title: "Mini React",
+      description:
+        "A mini react compiler that uses DOM elements instead of Virtual DOM",
+      link: "https://github.com/allenelguira16/mini-react",
+    },
+    {
+      title: "Nebula",
+      description:
+        "A framework written with the newest features of PHP 8 such as attributes, destructuring, and many more",
+      link: "https://github.com/AllenElguira16/nebula",
+    },
+    {
+      title: "Retro player",
+      description: "A simple web application to play videos in ascii format",
+      link: "https://github.com/allenelguira16/retro-player",
+    },
+    {
+      title: "Image to ascii CLI",
+      description: "A CLI application for displaying image to ascii in console",
+      link: "https://github.com/allenelguira16/image-to-ascii",
+    },
+  ],
+};
+
 export const experiences: TExperience[] = [
   {
     title: "Global Payments",
@@ -177,29 +206,6 @@ export const experiences: TExperience[] = [
         description:
           "An interactive e-learning service\nWritten in React, and TailwindCSS in frontend and NodeJS in backend",
         link: "https://github.com/AllenElguira16/E-Learning",
-      },
-    ],
-  },
-  {
-    title: "Others",
-    shortTitle: "Others",
-    works: [
-      {
-        responsibilities: ["Fun projects I made"],
-      },
-    ],
-    projects: [
-      {
-        title: "Video to Ascii CLI",
-        description:
-          "A CLI tool that converts any mp4 videos into ascii animation\nWritten in NodeJS in backend and utilizing worker_threads for maximize performance",
-        link: "https://github.com/AllenElguira16/video-to-ascii-cli",
-      },
-      {
-        title: "Nebula",
-        description:
-          "A framework written with newest features of PHP 8 such as attributes, destructuring, and many more",
-        link: "https://github.com/AllenElguira16/Nebula",
       },
     ],
   },

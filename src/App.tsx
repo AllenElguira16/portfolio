@@ -3,6 +3,7 @@ import { Footer } from "./features/Footer";
 import { Intro } from "./features/Intro";
 import { Navbar } from "./features/Navbar";
 import { Skills } from "./features/Skills";
+import { Highlights } from "./features/Highlights";
 import { Experience } from "./features/Experience";
 import { Meta } from "./features/Meta";
 
@@ -16,6 +17,7 @@ function App() {
           <Intro />
           <About />
           <Skills />
+          <Highlights />
           <Experience />
         </section>
         <Footer />
