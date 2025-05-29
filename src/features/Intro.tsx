@@ -23,8 +23,8 @@ export const Intro: FC = () => {
         <div>
           <span className="text-lg">Hi, my name is Michael Allen Elguira</span>
           <h1 className="pb-6 text-2xl sm:text-3xl font-bold font-title">
-            A Fullstack Developer specialized in React, Next.js, Node.js and
-            TypeScript
+            A Frontend Engineer focused on building fast, scalable, and
+            user-friendly web applications with React and TypeScript.
           </h1>
           <div className="flex flex-wrap gap-4">
             {links.map(({ link, Logo, text }) => (

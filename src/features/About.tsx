@@ -1,49 +1,44 @@
 import { Content } from "../components/Content";
 import { Title } from "../components/Title";
-import { getYearsOfExperience } from "../utils/getYearsOfExperience";
 
 export const About = () => {
-  const year = Math.floor(getYearsOfExperience());
-  const isOver = getYearsOfExperience() % 1 !== 0;
-
   return (
     <Content id="about">
       <Title>About</Title>
       <p className="py-2">
-        A Fullstack Developer with {isOver && "over "}
-        {year} years of professional experience, striving for clean-code yet
-        human-readable code.
+        I’m a frontend-focused engineer with over five years of professional
+        experience, passionate about crafting seamless, performant, and visually
+        engaging web experiences using modern JavaScript, TypeScript, and UI
+        frameworks.
       </p>
       <p className="py-2">
-        I’m a Full-stack Engineer with over five years of professional
-        experience, dedicated to writing clean, maintainable, and human-readable
-        code that enhances both team collaboration and project quality.
+        My journey into programming began in my final days of high school,
+        sparked by a random social media post about coding. With no clue what it
+        meant, I dove in out of curiosity quickly falling in love with the
+        creative power of building things from scratch. I started with small C#
+        Windows applets, mostly just to prank classmates, but that curiosity
+        soon turned into a deep passion for the web.
       </p>
       <p className="py-2">
-        My journey into programming started in my final days of high school when
-        I stumbled upon a social media post about coding. At the time, I had no
-        idea what it was about, but curiosity took over. I began researching and
-        experimenting, building small C# Windows applets—mostly to prank my
-        classmates!
+        Over the years, I’ve evolved with the web itself starting back in the
+        days of ES3, jQuery, and raw PHP, and growing alongside the rise of
+        component-based libraries and frameworks like React, Vue, and Solid.js.
+        I specialize in building responsive UIs, optimizing frontend
+        performance, and creating user-centric interfaces that feel fast, fluid,
+        and intuitive.
       </p>
       <p className="py-2">
-        That curiosity quickly turned into passion. I explored systems
-        programming with C++, Windows applications in C#, hardware programming
-        with Arduino C, and web development using PHP, TypeScript, and more. I
-        started building websites back in the ES3, jQuery, and PHP era—before
-        JavaScript became fully standardized.
+        I’m a strong advocate for writing clean, maintainable, and
+        human-readable code because great frontend development is as much about
+        collaboration and clarity as it is about code. I constantly explore new
+        technologies and best practices to stay ahead of the curve, and I enjoy
+        solving complex UI problems and turning ideas into polished, scalable
+        products.
       </p>
       <p className="py-2">
-        Throughout my career, I’ve been committed to continuous learning, always
-        staying up-to-date with emerging technologies and best practices. I
-        thrive on solving complex problems, optimizing performance, and
-        developing scalable solutions that create real impact.
-      </p>
-      <p className="py-2">
-        I’ve been recognized for my problem-solving skills and ability to
-        deliver high-quality products, helping clients achieve their goals
-        efficiently. But beyond just writing code, I focus on building
-        meaningful solutions that make a difference.
+        Whether I’m refining component architectures, working with design
+        systems, or digging deep into rendering performance, I’m driven by one
+        thing: delivering frontend experiences that truly resonate with users.
       </p>
     </Content>
   );
